@@ -1,0 +1,215 @@
+/* --- Final Polished & Responsive UI --- */
+
+:root {
+    --bg-generator: #f8f9fb;
+    --bg-modal-dark: #1b1c1d;
+    --bg-modal: rgba(51, 53, 55, 0.90);
+    --outline-color: #f8f9fb;
+    --text-primary: #f8f9fb;
+    --button-bg: #004a77;
+    --button-text: #a8c7fa;
+    --button-hover: #005a94;
+    
+    --bg-overlay: rgba(10, 10, 12, 0.6);
+    --shadow-color: rgba(0, 0, 0, 0.25);
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+#storybook-extractor-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background-color: var(--bg-overlay);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    animation: fadeIn 0.4s ease;
+}
+
+#storybook-extractor-container {
+    background-color: var(--bg-modal);
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 280px;
+    width: 100%;
+    box-shadow: 0 20px 25px -5px var(--shadow-color), 0 10px 10px -5px var(--shadow-color);
+    position: relative;
+    border: 1.5px solid var(--outline-color);
+    transform: scale(0.95) translateY(10px);
+    animation: popIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+#storybook-extractor-container h1 {
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0 0 1rem 0;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+#storybook-extractor-cover-preview {
+    width: 100%;
+    aspect-ratio: 8.5 / 11;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 15px -3px var(--shadow-color);
+}
+
+#storybook-extractor-download-btn {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 0.8rem 1.25rem;
+    border-radius: 10px;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+}
+
+#storybook-extractor-download-btn:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 74, 119, 0.3);
+}
+
+#storybook-extractor-close-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 0;
+    width: 1.85rem;
+    height: 1.85rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+
+#storybook-extractor-close-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg) scale(1.1);
+}
+
+@media (max-width: 480px) {
+    #storybook-extractor-container {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+    #storybook-extractor-container h1 {
+        font-size: 1.1rem;
+    }
+    #storybook-extractor-download-btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.95) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+body.generator-page {
+    background-color: var(--bg-generator);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: var(--font-sans);
+}
+
+.generator-status {
+    background-color: var(--bg-modal-dark);
+    color: var(--text-primary);
+    padding: 2.5rem; /* Unified padding */
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    min-height: 250px;
+}
+
+.generator-status.success {
+    padding: 0;
+    justify-content: space-between; /* Switch to space-between for footer layout */
+}
+
+.generator-main {
+    padding: 2.5rem 2rem 1.5rem; /* Balanced padding */
+}
+
+/* --- Spacing Fix --- */
+.generator-status h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 500;
+}
+.generator-main h1 {
+    margin-top: 1rem; /* Add space above success title */
+}
+
+.generator-status p {
+    font-size: 1rem;
+    color: var(--button-text);
+    margin: 0;
+}
+
+.generator-footer {
+    padding: 1rem;
+    border-top: 1px solid #4a5050;
+    /* Removed margin-top */
+}
+
+.generator-footer a {
+    color: var(--text-primary);
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.generator-footer a:hover {
+    color: var(--button-text);
+}
+
+.success-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1rem;
+}
+
+.heart-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}

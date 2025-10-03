@@ -1,0 +1,54 @@
+{
+  "author": "Laurent Denoue https://x.com/ldenoue",
+  "manifest_version": 3,
+  "name": "Storybook Extractor",
+  "version": "2.3",
+  "description": "Create printable versions of Gemini Storybooks and download them as PDFs.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Extract Story"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "style.css",
+        "generator.html",
+        "generator.js",
+        "lib/pdf-lib.min.js",
+        "lib/fontkit.umd.min.js",
+        "fonts/poppins-latin-400-normal.ttf",
+        "fonts/poppins-latin-500-normal.ttf",
+        "img/heart.png" 
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}

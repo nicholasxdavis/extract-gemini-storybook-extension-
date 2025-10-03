@@ -1,40 +1,8 @@
-# Extract Gemini Storybook Extension
+# Print Gemini Storybooks
 
-A simple Chrome extension that extracts text and images from Gemini storybooks and saves them as a PDF.  
-Built for storybooks with a consistent structure — each page containing an image and a corresponding text block.  
+- Download for Chrome https://chromewebstore.google.com/detail/storybook-extractor/neknbnkfjcfkjnhbjahfiekklemjhaaj
+- Open any shared storybooks, e.g. https://gemini.google.com/share/cbd4c3dece1e
+- Click the extension
+- See the printable version opened in a new tab
 
----
-
-## ✨ Features
-- One-click extraction of Gemini storybook content  
-- Converts text + images into a clean PDF  
-- Output is ebook/KDP-ready  
-- Minimal setup — no external dependencies  
-
----
-
-## 🙌 Credits
-Huge thanks to [@ldenoue (Laurent Denoue)](https://x.com/ldenoue) for the original project:  
-👉 [print-gemini-storybook-extension](https://github.com/ldenoue/print-gemini-storybook-extension)
-
----
-
-## 🚀 Installation
-1. Clone or download this repository.  
-2. Open **Chrome** and navigate to:  chrome://extensions/
-
-3. Enable **Developer Mode** (top right).  
-4. Click **Load unpacked** and select the extension folder.  
-
----
-
-## 📖 Usage
-1. Open any shared Gemini storybook link, e.g.  
-[https://gemini.google.com/share/cbd4c3dece1e] (https://gemini.google.com/share/cbd4c3dece1e)  
-2. Click the **Extract Gemini Storybook** extension icon.  
-3. The storybook will download as a **PDF** in ebook/KDP-ready format.
-   
----
-
-## 📄 License
-MIT License – do whatever you want, just give credit.  
+Created by Laurent Denoue https://x.com/ldenoue

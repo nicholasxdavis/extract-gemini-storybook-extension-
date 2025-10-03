@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Access-Control-Allow-Origin",
+          "operation": "set",
+          "value": "*"
+        },
+        {
+          "header": "Access-Control-Allow-Methods",
+          "operation": "set",
+          "value": "GET, POST, PUT, DELETE, HEAD, OPTIONS"
+        },
+        {
+            "header": "Access-Control-Allow-Headers",
+            "operation": "set",
+            "value": "Content-Type"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://*.googleusercontent.com/*",
+      "resourceTypes": [
+        "xmlhttprequest",
+        "image",
+        "main_frame"
+      ]
+    }
+  }
+]
