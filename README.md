@@ -32,4 +32,4 @@ Built for storybooks with a consistent structure — each page containing an ima
 
 
 ## 📄 License
-MIT License – do whatever you want, just give credit.  
+MIT License 
