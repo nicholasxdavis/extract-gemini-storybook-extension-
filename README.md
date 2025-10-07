@@ -13,12 +13,6 @@ Built for storybooks with a consistent structure — each page containing an ima
 
 ---
 
-## 🙌 Credits
-Huge thanks to [@ldenoue (Laurent Denoue)] (https://x.com/ldenoue) for the original project:  
-👉 [print-gemini-storybook-extension] (https://github.com/ldenoue/print-gemini-storybook-extension)
-
----
-
 ## 🚀 Installation
 1. Clone or download this repository.  
 2. Open **Chrome** and navigate to:  chrome://extensions/
