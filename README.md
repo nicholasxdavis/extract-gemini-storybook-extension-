@@ -5,7 +5,7 @@ Built for storybooks with a consistent structure — each page containing an ima
 
 ---
 
-## ✨ Features
+## Features
 - One-click extraction of Gemini storybook content  
 - Converts text + images into a clean PDF  
 - Output is ebook/KDP-ready  
@@ -13,7 +13,7 @@ Built for storybooks with a consistent structure — each page containing an ima
 
 ---
 
-## 🚀 Installation
+## Installation
 1. Clone or download this repository.  
 2. Open **Chrome** and navigate to:  chrome://extensions/
 
@@ -22,7 +22,7 @@ Built for storybooks with a consistent structure — each page containing an ima
 
 ---
 
-## 📖 Usage
+##  Usage
 1. Open any shared Gemini storybook link, e.g.  
 [https://gemini.google.com/share/cbd4c3dece1e] (https://gemini.google.com/share/cbd4c3dece1e)  
 2. Click the **Extract Gemini Storybook** extension icon.  
@@ -31,5 +31,5 @@ Built for storybooks with a consistent structure — each page containing an ima
 ---
 
 
-## 📄 License
+## License
 MIT License 
